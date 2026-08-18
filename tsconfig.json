@@ -1,0 +1,15 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		/* Basic Options */
+		"outDir": ".",
+		"rootDir": ".",
+		"composite": true,
+
+		/* Module Resolution Options */
+		"resolveJsonModule": true,
+	},
+	"files": [
+		"package.json",
+	],
+}
