@@ -1,6 +1,7 @@
 import type { Configurator, OverridesOptions } from '@zokugun/eslint-toolkit';
 
 import { minorWords as defaultMinorWords } from './lists/minor-words.js';
+import { nonCodeWords } from './lists/non-code-words.js';
 import { preserveWords as defaultPreserveWords } from './lists/preserve-words.js';
 
 type BaseOptions = {
@@ -21,6 +22,7 @@ export function glossary(options: OverridesOptions<BaseOptions> = {}): Configura
 
 	return (_resolver, register) => {
 		register('glossary/minorWords', minorWords);
+		register('glossary/nonCodeWords', nonCodeWords);
 		register('glossary/preserveWords', preserveWords);
 
 		return undefined;
